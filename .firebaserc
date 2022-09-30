@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "to-do-36469": {
+      "hosting": {
+        "todo-app": [
+          "to-do-36469"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "to-do-36469"
+  }
+}

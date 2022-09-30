@@ -1,9 +1,9 @@
 
  import { Component } from '@angular/core';
- import { Task } from './task/task';
+ import { Task } from '../task/task';
  import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
  import { MatDialog } from '@angular/material/dialog';
- import { TaskDialogResult, TaskDialogComponent } from './task-dialog/task-dialog.component';
+ import { TaskDialogResult, TaskDialogComponent } from '../task-dialog/task-dialog.component';
  import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
  import { BehaviorSubject } from 'rxjs';
  
@@ -16,11 +16,11 @@
  };
  
  @Component({
-   selector: 'app-root',
-   templateUrl: './app.component.html',
-   styleUrls: ['./app.component.css'],
+   selector: 'app-todo',
+   templateUrl: './todo.component.html',
+   styleUrls: ['./todo.component.css'],
  })
- export class AppComponent {
+ export class TodoComponent {
    todo = getObservable(this.store.collection('todo'));
    inProgress = getObservable(this.store.collection('inProgress'));
    done = getObservable(this.store.collection('done'));
